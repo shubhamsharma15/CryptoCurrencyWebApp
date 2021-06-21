@@ -1,4 +1,2 @@
 # CryptoCurrencyWebApp
-I'll be showing here the prediction of top 100 cryptocurrency in next 7 days or less using STREAMLIT
-THANK YOU,
-SHUBHAM SHARMA
+https://share.streamlit.io/shubhamsharma15/cryptocurrencywebapp/main/app.py
