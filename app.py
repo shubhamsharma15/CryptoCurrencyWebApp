@@ -58,9 +58,10 @@ def load_data():
     soup = BeautifulSoup(cmc.content, 'html.parser')
     
     data = soup.find('script', id='__NEXT_DATA__', type='application/json')
-    st.write(data)
+    
     coins = {}
     coin_data = json.loads(data.contents[0])
+    st.write(coin_data)
     listings = coin_data['props']['initialState']['cryptocurrency']['listingLatest']['data']
     for i in listings:
       coins[str(i['id'])] = i['slug']
