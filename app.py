@@ -82,9 +82,9 @@ def load_data():
       coin_name.append(i['slug'])
       coin_symbol.append(i['symbol'])
       price.append(i[currency_price_unit]['price'])
-#       percent_change_1h.append(i['quote'][currency_price_unit]['percentChange1h']) # percent_change_1h
-      percent_change_24h.append(i[currency_price_unit]['percentChange24h']) #percent_change_24h
-      percent_change_7d.append(i[currency_price_unit]['percentChange7d']) # percent_change_7d
+#       percent_change_1h.append(i['quote'][currency_price_unit]['priceChange1h']) # percent_change_1h
+      percent_change_24h.append(i[currency_price_unit]['priceChange24h']) #percent_change_24h
+      percent_change_7d.append(i[currency_price_unit]['priceChange7d']) # percent_change_7d
       market_cap.append(i['marketCap']) # market_cap
       volume_24h.append(i[currency_price_unit]['volume24h']) # volume_24h
 
