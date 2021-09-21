@@ -93,7 +93,7 @@ def load_data():
     df['coin_name'] = coin_name
     df['coin_symbol'] = coin_symbol
     df['price'] = price
-    df['percentChange1h'] = percent_change_1h
+#     df['percentChange1h'] = percent_change_1h
     df['percentChange24h'] = percent_change_24h
     df['percentChange7d'] = percent_change_7d
     df['marketCap'] = market_cap
