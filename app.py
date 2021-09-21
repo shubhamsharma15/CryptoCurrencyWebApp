@@ -65,7 +65,7 @@ def load_data():
     st.json(coin_data)
     
     listings = coin_data['props']['initialState']['cryptocurrency']['spotlight']['data']['trendingList']
-    st.write(listings)
+#     st.write(listings)
     for i in listings:
       coins[str(i['id'])] = i['slug']
 
@@ -77,16 +77,16 @@ def load_data():
     percent_change_7d = []
     price = []
     volume_24h = []
-
+    currency_price_unit = 'priceChange'
     for i in listings:
       coin_name.append(i['slug'])
       coin_symbol.append(i['symbol'])
-      price.append(i['quote'][currency_price_unit]['price'])
-      percent_change_1h.append(i['quote'][currency_price_unit]['percentChange1h']) # percent_change_1h
-      percent_change_24h.append(i['quote'][currency_price_unit]['percentChange24h']) #percent_change_24h
-      percent_change_7d.append(i['quote'][currency_price_unit]['percentChange7d']) # percent_change_7d
-      market_cap.append(i['quote'][currency_price_unit]['marketCap']) # market_cap
-      volume_24h.append(i['quote'][currency_price_unit]['volume24h']) # volume_24h
+      price.append(i[currency_price_unit]['price'])
+#       percent_change_1h.append(i['quote'][currency_price_unit]['percentChange1h']) # percent_change_1h
+      percent_change_24h.append(i[currency_price_unit]['percentChange24h']) #percent_change_24h
+      percent_change_7d.append(i[currency_price_unit]['percentChange7d']) # percent_change_7d
+      market_cap.append(i['marketCap']) # market_cap
+      volume_24h.append(i[currency_price_unit]['volume24h']) # volume_24h
 
     df = pd.DataFrame(columns=['coin_name', 'coin_symbol', 'marketCap', 'percentChange1h', 'percentChange24h', 'percentChange7d', 'price', 'volume24h'])
     df['coin_name'] = coin_name
