@@ -56,7 +56,7 @@ currency_price_unit = col1.selectbox('Select currency for price', ('USD', 'BTC',
 def load_data():
     cmc = requests.get('https://coinmarketcap.com')
     soup = BeautifulSoup(cmc.content, 'html.parser')
-    slug = soup.SlugField(unique=True, default=uuid.uuid1)
+    
     data = soup.find('script', id='__NEXT_DATA__', type='application/json')
     coins = {}
     coin_data = json.loads(data.contents[0])
