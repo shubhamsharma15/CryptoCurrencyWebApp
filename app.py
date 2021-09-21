@@ -65,6 +65,7 @@ def load_data():
     st.json(coin_data)
     
     listings = coin_data['props']['initialState']['cryptocurrency']['spotlight']['data']['trendingList']
+    st.write(listings)
     for i in listings:
       coins[str(i['id'])] = i['slug']
 
